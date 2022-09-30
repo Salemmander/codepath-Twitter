@@ -30,7 +30,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onLoginButton:" destination="aQz-6z-k3P" eventType="touchUpInside" id="BnU-CY-WJY"/>
+                                    <action selector="onLoginButton:" destination="aQz-6z-k3P" eventType="touchUpInside" id="IUW-El-j8N"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="443" y="80"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Home-->
         <scene sceneID="SET-3g-CXS">
             <objects>
-                <tableViewController id="h2q-eZ-Fs4" sceneMemberID="viewController">
+                <tableViewController id="h2q-eZ-Fs4" customClass="HomeTableTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="SeU-QB-zPy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,11 +72,18 @@
                             <outlet property="delegate" destination="h2q-eZ-Fs4" id="eBC-QX-VyK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="LSG-it-rMO"/>
+                    <navigationItem key="navigationItem" title="Home" id="LSG-it-rMO">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="UsA-na-NGG">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onLogout:" destination="h2q-eZ-Fs4" id="lyg-9L-6Us"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQv-dQ-919" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2022" y="80"/>
+            <point key="canvasLocation" x="2255" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PY4-AC-ako">
@@ -85,6 +92,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cyV-eZ-SKG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.27451450529999999" green="0.58369090020000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.27451450529999999" green="0.58369090020000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.27451450529999999" green="0.58369090020000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="h2q-eZ-Fs4" kind="relationship" relationship="rootViewController" id="v7a-we-68X"/>
